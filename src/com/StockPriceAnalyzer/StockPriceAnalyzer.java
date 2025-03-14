@@ -1,4 +1,4 @@
-package com.yonghcodes;
+package com.StockPriceAnalyzer;
 import java.util.ArrayList;
 
 public class StockPriceAnalyzer {
