@@ -1,5 +1,6 @@
 package com.CarRentalSystem;
 
+// Represents a motorcycle implementing the MotorVehicle interface.
 public class Motorcycle implements MotorVehicle {
     private String make;
     private String model;
@@ -7,12 +8,14 @@ public class Motorcycle implements MotorVehicle {
     private int numberOfWheels;
     private String motorcycleType;
 
+    //Constructor to initialize basic motorcycle properties.
     public Motorcycle(String make, String model, int year) {
         this.make = make;
         this.model = model;
         this.year = year;
     }
 
+    // Implement Vehicle interface methods
     @Override
     public String getMake() { return make; }
 
@@ -22,6 +25,7 @@ public class Motorcycle implements MotorVehicle {
     @Override
     public int getYear() { return year; }
 
+    // Implement MotorVehicle interface methods
     @Override
     public void setNumberOfWheels(int wheels) {
         if (wheels < 2 || wheels > 3) throw new IllegalArgumentException("Invalid wheel count");

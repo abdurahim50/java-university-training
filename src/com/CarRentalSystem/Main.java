@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// Main class to interact with the car rental system.
 public class Main {
     private static final List<Vehicle> vehicles = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
@@ -24,6 +25,7 @@ public class Main {
         } while (choice != 5);
     }
 
+    // Helper method to create a Car object.
     private static void createCar() {
         try {
             String make = readString("Make: ");
@@ -39,6 +41,7 @@ public class Main {
         }
     }
 
+    // Helper method to create a Motorcycle object.
     private static void createMotorcycle() {
         try {
             String make = readString("Make: ");
@@ -54,6 +57,7 @@ public class Main {
         }
     }
 
+    // Helper method to create a Truck object.
     private static void createTruck() {
         try {
             String make = readString("Make: ");
@@ -69,6 +73,7 @@ public class Main {
         }
     }
 
+    // Helper method to display the list of vehicles.
     private static void displayVehicles() {
         if (vehicles.isEmpty()) {
             System.out.println("No vehicles in the system!");
@@ -93,6 +98,7 @@ public class Main {
         }
     }
 
+    // Helper method to read integer input from the user.
     private static int readInt(String prompt) {
         while (true) {
             try {
@@ -104,6 +110,7 @@ public class Main {
         }
     }
 
+    // Helper method to read double input from the user.
     private static double readDouble(String prompt) {
         while (true) {
             try {
@@ -115,6 +122,7 @@ public class Main {
         }
     }
 
+    // Helper method to read string input from the user.
     private static String readString(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine().trim();

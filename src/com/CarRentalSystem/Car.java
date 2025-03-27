@@ -1,5 +1,6 @@
 package com.CarRentalSystem;
 
+// Represents a car implementing the CarVehicle interface.
 public class Car implements CarVehicle {
     private String make;
     private String model;
@@ -13,6 +14,7 @@ public class Car implements CarVehicle {
         this.year = year;
     }
 
+    // Implement Vehicle interface methods
     @Override
     public String getMake() { return make; }
 
@@ -22,6 +24,7 @@ public class Car implements CarVehicle {
     @Override
     public int getYear() { return year; }
 
+    // Implement CarVehicle interface methods
     @Override
     public void setNumberOfDoors(int doors) {
         if (doors < 1 || doors > 5) throw new IllegalArgumentException("Invalid door count");
